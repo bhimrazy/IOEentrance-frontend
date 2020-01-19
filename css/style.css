@@ -171,9 +171,9 @@ header .container .col-md-7 button:hover {
 .cover {
     width: 100%;
     height: 50vmin;
-    background: url(../assets/section-2-cover.jpg);
+    background: url(../assets/section-2-cover.jpg) no-repeat;
     background-position: 0rem -10rem;
-    background-size: 100%;
+    background-size: 200%;
     background-attachment: fixed;
 }
 
@@ -209,7 +209,13 @@ header .container .col-md-7 button:hover {
     padding-top: 3.5vmin;
     margin: 1rem;
     border-radius: 0.5em;
+    transition: all 0.2s ease;
     box-shadow: 1px 2px 20px 0px rgba(26, 101, 145, 0.363);
+}
+
+.numbers .rect:hover {
+    cursor: pointer;
+    box-shadow: 1px 2px 30px 5px rgba(26, 101, 145, 0.534);
 }
 
 .numbers {
@@ -336,6 +342,7 @@ header .container .col-md-7 button:hover {
 }
 
 .section-4 .team {
+    cursor: pointer;
     padding: 10vmin 6vmin;
 }
 
@@ -421,15 +428,30 @@ footer .column i:hover {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.815);
-    z-index: 9999;
-    transition: all 1.5s ease;
+    overflow: hidden;
+    left: 0px !important;
+    opacity: 0.97;
+    z-index: 100;
+    background: var(--tertiary);
+    border-bottom: 1px solid white;
+    box-shadow: 0 1rem 1.5rem rgba(26, 101, 145, 0.322) !important;
+    transition: all 0.5s ease-in;
 }
 
 /**-----------------Mobile-----------------**/
 @media only screen and (max-width: 768px) {
     header .navbar-brand {
         padding-left: 1rem;
+    }
+
+    header .row .col-md-5 {
+        padding-top: 12vmin;
+    }
+
+    header .row .col-md-7 {
+        padding: 15vmin 2vmin;
+        font-family: var(--Rubik);
+        color: var(--tertiary);
     }
 
     .section-1 .row .col-md-6 .panel {
@@ -442,12 +464,17 @@ footer .column i:hover {
         background-position: -25vmin -10vmin;
     }
 
+    .numbers {
+        margin-top: -5vmin;
+    }
+
     .numbers .rect {
-        width: 10rem;
-        height: 8rem;
+        width: 18rem;
+        height: 12rem;
     }
 
     .numbers .rect h1 {
+        padding: 1rem 1.5rem 0.3rem 1.5rem;
         font-size: 2rem;
     }
 
@@ -472,23 +499,124 @@ footer .column i:hover {
         padding-left: 0.6rem;
     }
 
+    .section-4 .team {
+        display: flex !important;
+        flex-direction: column !important;
+        padding: 0vmin 10vmin 10vmin 0vmin;
+        align-items: center;
+        align-content: center;
+
+    }
+
+    .section-4 .team .card {
+        align-content: center !important;
+    }
+
+    .section-4 .carousel-inner {
+        width: 20rem;
+    }
+
+    .section-4 .carousel-item {
+        padding-left: 0rem;
+    }
+
     footer .row .col-md-2 {
-        margin-top: 8vmin;
+        font-size: medium;
+    }
+
+    footer .md {
+        padding-top: 3vmin;
+    }
+}
+
+/* screen size 425px */
+
+@media only screen and (max-width: 425px) {
+    .section-4 .card {
+        width: 18em;
+    }
+
+    header .row .col-md-5 img {
+        display: none;
+    }
+
+    .numbers .rect h1 {
+        padding: 2rem 1.5rem 0.3rem 1.5rem;
+        font-size: 2rem;
+    }
+
+    .numbers {
+        margin-top: -8vmin;
+    }
+
+    .section-3 .col-md-6 {
+        padding-bottom: 4vmin;
+    }
+
+    .section-4 .team {
+        padding: 0vmin 0vmin 10vmin 0vmin;
+        align-items: center;
+        align-content: center;
+
+    }
+
+    .section-4 .carousel-item {
+        padding-left: 3rem;
+    }
+
+    .section-4 .carousel-inner {
+        width: 21rem;
+    }
+
+    footer .col-md-5 {
+        padding-bottom: 10vmin;
     }
 }
 
 /* screen size 375px */
-
 @media only screen and (max-width: 375px) {
     .section-4 .card {
         width: 18em;
     }
 
+    header .row .col-md-5 img {
+        display: none;
+    }
+
+    .numbers .rect h1 {
+        padding: 2rem 1.5rem 0.3rem 1.5rem;
+        font-size: 2rem;
+    }
+
+
+    .section-3 .desktop {
+        width: 15rem;
+        border-radius: 50px;
+        padding: 1.5vmin 2.5vmin;
+    }
+
+    .section-3 .desktop i {
+        font-size: 6vmin;
+    }
+
+    .section-4 .carousel-item {
+        padding-left: 0.8rem;
+    }
+
+
+
 
 }
 
+/* screen size 320px */
 @media only screen and (max-width: 320px) {
     .section-4 .carousel-inner {
         margin-left: -4vmin;
     }
+
+
+    .section-4 .carousel-item {
+        padding-left: 0rem;
+    }
+
 }
