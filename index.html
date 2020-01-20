@@ -16,7 +16,7 @@
 <body>
     <header>
         <div class="container-fluid border-bottom border-white">
-            <nav class="navbar navbar-expand-lg ">
+            <nav class="navbar navbar-expand-lg">
                 <a class="navbar-brand" href="#">
                     <!-- <img src="/assets/logo.png" width="30%" class="img-fluid" alt="IOEentrance-logo"> -->
                     IOEentrance
@@ -47,13 +47,17 @@
                             <a class="nav-link" href="#">Pages</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/Blog">Blog</a>
+                            <a class="nav-link" href="/blog.html">Blog</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Fact</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">About</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Account</a>
                         </li>
 
                     </ul>
@@ -243,7 +247,7 @@
                         <div class="carousel-inner">
                             <div class="carousel-item active text-center">
                                 <!--Card 2-->
-                                <div class="card mr-2 d-inline-block shadow">
+                                <div class="card mr-2 d-inline-block shadow-sm">
                                     <div class="card-img-top pt-3">
                                         <img src="/assets/UI-face-1.jpg" alt="Member" width="20%"
                                             class="img-fluid rounded-circle w-50 p-4">
@@ -260,7 +264,7 @@
                             </div>
                             <div class="carousel-item text-center">
                                 <!--Card 3-->
-                                <div class="card mr-2 d-inline-block shadow">
+                                <div class="card mr-2 d-inline-block shadow-sm">
                                     <div class="card-img-top pt-3">
                                         <img src="/assets/UI-face-1.jpg" alt="Member" width="20%"
                                             class="img-fluid rounded-circle w-50 p-4">
@@ -304,10 +308,6 @@
                 <div class="col-md-5">
                     <h1 class="text-light">About us</h1>
                     <p class="text-secondary">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
-                    <p class="pt-4 text-muted">
-                        Copyright ©2020 All rights reserved | This website is made by
-                        <span>BR Creations</span>
-                    </p>
                 </div>
                 <div class="col-md-5">
                     <h4 class="text-light">Newsletter</h4>
@@ -335,6 +335,15 @@
                         <i class="fab fa-twitter"></i>
                         <i class="fab fa-youtube"></i>
                     </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <h5 class="text-left text-muted col-md-10">
+                    Copyright ©2020 All rights reserved | This website is made by
+                    <span>BR Creations</span>
+                </h5>
+                <div class="move-up col-md-2 text-right">
+                    <span><i class="fas fa-arrow-circle-up fa-2x"></i></span>
                 </div>
             </div>
         </div>
@@ -388,6 +397,12 @@
 
 
 
+        // click to scroll top
+        $('.move-up span').click(function () {
+            $('html, body').animate({
+                scrollTop: 0
+            }, 1000);
+        })
         /**
          *
          *  sticky navigation

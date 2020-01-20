@@ -1,5 +1,6 @@
 /* Google Font */
 @import url('https://fonts.googleapis.com/css?family=Acme|Lobster|Roboto|Roboto+Mono|Patua+One|Rubik|Sniglet');
+@import url('https://fonts.googleapis.com/css?family=Anton|Lexend+Deca&display=swap');
 
 * {
     box-sizing: border-box;
@@ -13,6 +14,8 @@ section {
 
 /* -----Variables------- */
 :root {
+    --Anton: 'Anton', sans-serif;
+    --Lexend: 'Lexend Deca', sans-serif;
     --Roboto: "Roboto", sans-serif;
     --Roboto-mono: "Roboto Mono", monospace;
     --Snigle-font: "Sniglet", cursive;
@@ -28,6 +31,8 @@ section {
     --tertiary: #252a34;
     --light-white: #eaeaea;
     --pink: #be294e;
+    --text-gray: #3f4954;
+    --text-light: #535353da;
 }
 
 /* -----Header-Section------- */
@@ -59,18 +64,28 @@ header .navbar-brand:hover {
     color: var(--secondary);
 }
 
-/* 
-header .nav-link {
+nav {
+    padding: 0vmin 4vmin !important;
+}
+
+nav .navbar-toggler {
+    outline: none;
+    cursor: pointer;
+}
+
+header .nav-item {
+    display: block;
+    cursor: pointer;
+    padding: 3vmin 2vmin;
     transition: all 0.2s ease;
 }
 
-header .nav-link:hover {
+
+header .nav-item:hover {
     color: var(--secondary);
     display: inline-block;
     background: var(--light-gray);
-    padding: 1.3vmin 10vmin;
-    border-radius: 10px;
-} */
+}
 
 header .nav-link:hover {
     color: var(--secondary);
@@ -373,18 +388,28 @@ footer {
     font-family: var(--Roboto-mono);
     background: var(--tertiary);
     overflow-x: hidden;
-    padding: 16vmin 14vmin;
+    padding: 15vmin 14vmin 10vmin 14vmin;
 }
 
-footer p>span {
+footer h5>span {
     color: var(--pink);
     font-weight: 700;
     cursor: pointer;
     transition: all 0.2s ease;
 }
 
-footer p>span:hover {
+footer h5>span:hover {
     color: var(--primary);
+}
+
+footer .move-up {
+    cursor: pointer;
+    color: var(--primary);
+    transition: all 0.2s ease;
+}
+
+footer .move-up:hover {
+    color: var(--light-white);
 }
 
 footer input {
@@ -440,6 +465,10 @@ footer .column i:hover {
 
 /**-----------------Mobile-----------------**/
 @media only screen and (max-width: 768px) {
+    nav {
+        padding: 3vmin 4vmin !important;
+    }
+
     header .navbar-brand {
         padding-left: 1rem;
     }
@@ -617,6 +646,7 @@ footer .column i:hover {
 
     .section-4 .carousel-item {
         padding-left: 0rem;
+        margin-left: -0.4rem;
     }
 
 }
